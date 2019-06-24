@@ -1,0 +1,57 @@
+@import 'theme-core/breakpoints';
+@import 'theme-core/mixins';
+
+// Breakpoints: refer to _breakpoints.scss for value sets
+// $breakpoints-custom: (
+//   'mini':   0,
+//   'small':  0,
+//   'medium': 640,
+//   'large':  1024,
+//   'xlarge': 1200,
+// );
+
+$breakpoints-model: $breakpoints-foundation; // or 'breakpoints-uikit2', 'breakpoints-uikit3', 'breakpoints-custom'
+
+// Colours
+$color-black:       #171130;
+$color-white:       #fff;
+
+$color-major:       #7c01fd;
+$color-minor:       #3722ae;
+$color-light:       #f7efff;
+
+$color-border:      #90a4ae;
+
+$color-alert:       #fc3777;
+$color-highlight:   #fcc900;
+$color-button-pill: #eaf7fd;
+
+// Font Family
+$font-heading:  'Circular', sans-serif;  // 700
+$font-content:  'Univers', sans-serif;   // 300, 400, 700
+
+// Font Sizes
+$typegrid: false;
+
+$font-size-roots: (
+  16px,
+  16px,
+  16px,
+  18px,
+  20px,
+);
+
+$font-leading-ratio: 1.6; // (typegrid) ? (Leading ÷ font size) : line-height;
+
+// GSHQ
+$wrapper-max-width:       60rem;
+
+$border-radius:           4px;
+$box-shadow:              0 4px 10px rgba($color-minor, 0.15);
+$box-shadow-active:       0 8px 20px rgba($color-minor, 0.4);
+$box-shadow-static:       0 4px 20px rgba($color-minor, 0.25);
+
+$grid-column-count:       12;
+$project-card-max-width:  380px;
+$global-margin:           1rem;
+$global-padding:          1rem;

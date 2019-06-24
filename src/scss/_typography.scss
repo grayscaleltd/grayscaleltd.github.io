@@ -1,0 +1,161 @@
+a {
+  border-bottom: 1px solid currentcolor;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover, &:focus, &:active {
+    color: $color-major;
+  }
+}
+
+address {
+  font-style: normal;
+}
+
+blockquote {
+  position: relative;
+  margin: 0;
+  padding: ($global-padding * 2) 0;
+  background-size: 0;
+  background-repeat: no-repeat;
+  font-family: $font-heading;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+
+  @include gs-breakpoint(medium, up) {
+    padding: ($global-padding * 4) 0;
+  }
+
+  &[data-style] {
+    @include gs-breakpoint(medium, up) {
+      padding: ($global-padding * 8) ($global-padding * 6);
+      background-size: auto;
+    }
+  }
+
+  &[data-style='a'], &[data-style='c'] {
+    @include gs-breakpoint(medium, up) {
+      background-position: left top, right bottom;
+    }
+  }
+
+  &[data-style='b'] {
+    @include gs-breakpoint(medium, up) {
+      background-position: left bottom, right top;
+    }
+  }
+
+  > p:last-child:not(:only-child) {
+    font-size: 1.2rem;
+  }
+}
+
+code {
+  background: rgba($color-black, 0.1);
+  padding: 2px 5px;
+  box-decoration-break: clone;
+}
+
+dd {
+  margin: 0 0 $global-margin;
+  font-family: $font-heading;
+  font-weight: 700;
+}
+
+em {
+  background: linear-gradient(to bottom, $color-white 0%, $color-white 40%, rgba($color-highlight, 0.6) 40%, rgba($color-highlight, 0.6) 100%);
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: geometricPrecision; // for thinner Circular
+  backface-visibility: hidden;        // for thinner Circular
+
+  * + & {
+    margin-top: $global-margin * 3;
+  }
+}
+
+h1, .h1 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: $global-margin * 2;
+  color: $color-major;
+  font-size: 2.4rem;
+  line-height: 1.15;
+  text-align: center;
+
+  @at-root .h1 {
+    @extend h1;
+  }
+
+  &.page-title {
+    max-width: 36rem;
+
+    br {
+      display: none;
+
+      @include gs-breakpoint(medium, up) {
+        display: inline;
+      }
+    }
+  }
+}
+
+%h2-size {
+  font-size: 1.7rem;
+  line-height: 1.18;
+}
+
+h2 {
+  @extend %h2-size;
+
+  .page article &, .single article & {
+    color: $color-major;
+  }
+}
+
+h3 {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+hr {
+  margin-top: $global-margin * 3;
+  margin-bottom: $global-margin * 3;
+}
+
+small {
+  font-size: 0.75rem;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.article-links {
+  margin: $global-margin auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-important {
+  color: $color-major;
+  font-size: 1.3rem;
+
+  a {
+    &:hover, &:focus, &:active {
+      border-bottom: 0;
+    }
+  }
+}
+
+// [src*='twemoji.maxcdn.com'] { // https://github.com/twitter/twemoji#inline-styles
+//   margin: 0 0.05em 0 0.1em;
+//   width: 1em;
+//   height: 1em;
+//   vertical-align: -0.1em;
+// }

@@ -1,0 +1,60 @@
+button, .button, [type='submit'] {
+  display: inline-block;
+  appearance: none;
+  width: auto;
+  border: 0;
+  font-family: $font-heading;
+  font-weight: 700;
+
+  & + & {
+    @include gs-breakpoint(small) {
+      margin-top: $global-margin;
+    }
+  }
+}
+
+[type='submit'], .button-primary {
+  padding: 1em 4em 1em 1.5em;
+  border-radius: 2em;
+  background: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYgOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGV4dCB4PSIwIiB5PSIxMCIgZmlsbD0iI2ZmZiIgc3R5bGU9ImZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmIj7ihpI8L3RleHQ+PC9zdmc+') calc(100% - 1.5em) center / 1.5em no-repeat $color-major;
+  color: $color-white;
+  @include gs-transition;
+
+  &:hover, &:focus, &:active {
+    background-position-x: calc(100% + 1.5em);
+    color: $color-white;
+  }
+}
+
+.button-secondary {
+  padding: 1em 1.5em;
+  box-shadow: $box-shadow;
+  background: $color-white;
+  color: $color-major;
+  @include gs-transition;
+
+  &:hover, &:focus, &:active {
+    box-shadow: $box-shadow-active;
+  }
+}
+
+.button-pill {
+  margin: 0 $global-margin;
+  padding: 0.5em 3em;
+  border-radius: 2em;
+  background: $color-button-pill;
+  color: $color-major;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  @include gs-transition;
+
+  &:not(.is-active):hover {
+    box-shadow: $box-shadow;
+  }
+
+  &.is-active {
+    background: $color-major;
+    color: $color-white;
+  }
+}

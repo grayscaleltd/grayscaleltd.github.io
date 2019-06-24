@@ -1,0 +1,16 @@
+.view {
+  overflow: hidden;
+  color: $color-black;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $global-padding;
+  padding-right: $global-padding;
+  max-width: $wrapper-max-width;
+}
+
+.container {
+  @include gs-grid-row(left);
+}

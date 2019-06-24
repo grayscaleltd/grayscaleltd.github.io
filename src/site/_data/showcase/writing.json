@@ -1,0 +1,14 @@
+{
+  "title": "Helpful words",
+  "description": "We may not be trained copywriters, but we can sure put pen to paper when it matters.",
+  "image": "/assets/images/projects/grayscale-blog.png",
+  "projects": [
+    {
+      "title": "Grayscale Blog",
+      "maker": "Grayscale",
+      "description": "The writey bits. See what things our developers, salespeople, and designers have to say.",
+      "image": "/assets/images/projects/grayscale-blog.png",
+      "url": "https://grayscale.com.hk/blog"
+    }
+  ]
+}
