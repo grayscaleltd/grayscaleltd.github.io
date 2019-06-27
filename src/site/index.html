@@ -27,27 +27,62 @@ bodyClass: page-front
 
 <section class="showcase">
   <div class="wrapper">
+    {%- for category in showcase -%}
     <section class="showcase__section write">
-      <div class="title">
-        <div class="title__content">
+      {%- assign data = category[1] -%}
+      <header class="header">
+        <div class="header__content">
           <h2>
-            Helpful words
+            {{ data.title }}
           </h2>
 
           <p>
-            We may not be trained copywriters, but we can sure put pen to paper when it matters.
+            {{ data.description }}
           </p>
         </div>
 
         <div class="title__image">
 
         </div>
-      </div>
+      </header>
 
       <div class="content">
+        <div class="content__group">
+          {%- for project in data.projects -%}
+          <article class="project">
+            <div class="project__image" data-image="{{ project.image | relative_url }}">
+              {%- if project.url != "" -%}
+              <a href="{{ project.url }}" target="_blank">
+                <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+              </a>
+              {%- else -%}
+              <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+              {%- endif -%}
+            </div>
 
+            <div class="project__info">
+              <h1 class="title">
+                {%- if project.url != "" -%}
+                <a href="{{ project.url }}">
+                  {{ project.title }}
+                </a>
+                {%- else -%}
+                {{ project.title }}
+                {%- endif -%}
+              </h1>
+
+              <span class="author">{{ project.maker }}</span>
+
+              <p class="description">
+                {{ project.description }}
+              </p>
+            </div>
+          </article>
+          {%- endfor -%}
+        </div>
       </div>
     </section>
+    {%- endfor -%}
   </div>
 </section>
 

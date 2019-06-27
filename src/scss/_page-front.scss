@@ -43,8 +43,6 @@
     .intro__image {
       display: none;
 
-
-
       @include gs-breakpoint(large, up) {
         @include gs-grid-column(auto);
         display: flex;
@@ -62,10 +60,11 @@
       padding-top: 5rem;
       padding-bottom: 5rem;
 
-      .title {
+      .header {
         @include gs-grid-row(left);
         display: flex;
         align-items: flex-end;
+        margin-bottom: 2rem;
 
         &__content,
         &__image {
@@ -75,6 +74,88 @@
         &__content {
           h2 {
             color: $color-major;
+          }
+        }
+      }
+
+      .content {
+        &__group {
+          @include gs-grid-row(left);
+        }
+
+        .project {
+          @include gs-grid-column(1, 1);
+          margin-bottom: 2rem;
+
+          @include gs-breakpoint(medium, up) {
+            @include gs-grid-column(1, 2);
+          }
+
+          @include gs-breakpoint(large, up) {
+            @include gs-grid-column(1, 3);
+          }
+
+          &__image {
+            $ratio: 140 / 320;
+
+            @include gs-transition;
+            padding-top: $ratio * 100%;
+            margin-bottom: 1rem;
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px rgba($color-minor, 0.15);
+
+            &:hover,
+            &:focus {
+              box-shadow: 0px 8px 20px rgba($color-minor, 0.4);
+            }
+
+            a {
+              border: 0;
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              border-radius: 4px;
+              overflow: hidden;
+            }
+
+            img {
+              @extend %sr-only;
+            }
+          }
+
+          &__info {
+            .title {
+              color: $color-black;
+              font-size: 1.2rem;
+              line-height: 1.4;
+              text-align: left;
+              margin-bottom: 0.25rem;
+
+              a {
+                @include gs-transition;
+                border-bottom: 0;
+
+                &:hover,
+                &:focus {
+                  color: $color-major;
+                }
+              }
+            }
+
+            .author {
+              font-size: 0.75rem;
+              line-height: 1.2;
+              display: block;
+              margin-bottom: 1rem;
+
+              &::before {
+                content: 'By ';
+              }
+            }
           }
         }
       }

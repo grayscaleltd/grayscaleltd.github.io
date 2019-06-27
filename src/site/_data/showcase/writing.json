@@ -9,6 +9,13 @@
       "description": "The writey bits. See what things our developers, salespeople, and designers have to say.",
       "image": "/assets/images/projects/grayscale-blog.png",
       "url": "https://grayscale.com.hk/blog"
+    },
+    {
+      "title": "Support Portal",
+      "maker": "Grayscale",
+      "description": "What is website? How do I server? All your Qs find their As here.",
+      "image": "/assets/images/projects/grayscale-blog.png",
+      "url": "https://support.grayscale.com.hk/"
     }
   ]
 }

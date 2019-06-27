@@ -1,0 +1,35 @@
+{
+  "title": "Typologist’s corner",
+  "description": "🎶 And I just can’t get enough… of that nerdy typography and language stuff.",
+  "image": "/assets/images/projects/grayscale-blog.png",
+  "projects": [
+    {
+      "title": "Farro",
+      "maker": "Aceler Chua",
+      "description": "Grayscale’s first open-source font. Failure can be fun.",
+      "image": "/assets/images/projects/grayscale-blog.png",
+      "url": "https://playground.grayscale.design/farro"
+    },
+    {
+      "title": "Language Style Guide",
+      "maker": "Grayscale",
+      "description": "How we done write proper good grammars and 'speelings.'",
+      "image": "/assets/images/projects/grayscale-blog.png",
+      "url": "https://language.grayscale.design"
+    },
+    {
+      "title": "The Multilingual",
+      "maker": "Aceler Chua",
+      "description": "An intermittant, ongoing project to hand-letter as many languages as possible.",
+      "image": "/assets/images/projects/grayscale-blog.png",
+      "url": "https://instagram.com/themultilingual"
+    },
+    {
+      "title": "WeichEi",
+      "maker": "Anthony Amici",
+      "description": "Ever needed to make insulting German Lorem Ipsum? I thought you did.",
+      "image": "/assets/images/projects/grayscale-blog.png",
+      "url": "https://amicia.github.io/portfolio/warmduscher/"
+    }
+  ]
+}
