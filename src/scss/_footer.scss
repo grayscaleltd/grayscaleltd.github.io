@@ -11,6 +11,7 @@ footer {
 
     [class^="block__"] {
       @include gs-grid-column(1, 1);
+      margin-bottom: 2rem;
 
       @include gs-breakpoint(medium, up) {
         @include gs-grid-column(1, 2);
@@ -27,10 +28,14 @@ footer {
     }
 
     .block__cr {
-      text-align: right;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
+      margin-bottom: 0;
+
+      @include gs-breakpoint(large, up) {
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
 
       span {
         display: block;
